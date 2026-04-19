@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashish Prajapati | Aspiring Data Analyst</title>
     <meta name="description" content="Portfolio of Ashish Prajapati, an aspiring Data Analyst skilled in Python, SQL, Machine Learning, and Data Visualization.">
+    <meta name="theme-color" content="#020617">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
+    <div class="bg-blobs">
+        <div class="bg-blob" style="top: 10%; right: 10%;"></div>
+        <div class="bg-blob" style="top: 40%; left: 5%;"></div>
+        <div class="bg-blob" style="bottom: 10%; right: 5%;"></div>
+    </div>
+
     <nav id="navbar">
         <div class="container">
             <div class="logo">AP<span>.</span></div>
@@ -21,7 +29,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#contact" class="btn-nav">Contact</a></li>
+                <li><a href="#contact" class="btn-nav">Hire Me</a></li>
             </ul>
         </div>
     </nav>
@@ -29,18 +37,18 @@
     <header id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <p class="greeting">Hi, I'm</p>
+                <span class="greeting">Hi, I'm</span>
                 <h1 class="name">Ashish Prajapati</h1>
                 <h2 class="typewriter"><span id="type-text"></span><span class="cursor">|</span></h2>
                 <p class="hero-desc">Aspiring Data Analyst with hands-on experience in machine learning and dashboard development. Turning data into actionable insights.</p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn-primary">Hire Me</a>
-                    <a href="#" class="btn-secondary">Download Resume</a>
+                    <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-download"></i> My Resume</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/Anticoder03" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/ashish-prajapati-dev" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:ap5381545@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Anticoder03" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ashish-prajapati-dev" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ap5381545@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="hero-image">
@@ -65,22 +73,31 @@
 
     <section id="skills" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title">Technical Expertise</h2>
             <div class="skills-grid">
+                <!-- 1. Programming & Tools (Restored) -->
                 <div class="skill-category">
-                    <h3>Programming & Tools</h3>
+                    <div class="category-header">
+                        <i class="fas fa-terminal"></i>
+                        <h3>Programming & Tools</h3>
+                    </div>
                     <div class="tags">
-                        <span>Python</span>
-                        <span>SQL</span>
-                        <span>Jupyter Notebook</span>
-                        <span>Excel</span>
-                        <span>Power BI</span>
-                        <span>Tableau</span>
-                        <span>Git & GitHub</span>
+                        <span><i class="devicon-python-plain colored"></i> Python</span>
+                        <span><i class="fas fa-database"></i> SQL</span>
+                        <span><i class="devicon-jupyter-plain colored"></i> Jupyter Notebook</span>
+                        <span><i class="fas fa-file-excel"></i> Excel</span>
+                        <span><i class="devicon-powerbi-original colored"></i> Power BI</span>
+                        <span><i class="fas fa-chart-bar"></i> Tableau</span>
+                        <span><i class="devicon-git-plain colored"></i> Git & GitHub</span>
                     </div>
                 </div>
+
+                <!-- 2. Data Analysis (Restored) -->
                 <div class="skill-category">
-                    <h3>Data Analysis</h3>
+                    <div class="category-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Data Analysis</h3>
+                    </div>
                     <div class="tags">
                         <span>Data Cleaning</span>
                         <span>Data Preprocessing</span>
@@ -90,15 +107,88 @@
                         <span>Dashboard Creation</span>
                     </div>
                 </div>
+
+                <!-- 3. Machine Learning (Restored) -->
                 <div class="skill-category">
-                    <h3>Machine Learning</h3>
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Machine Learning</h3>
+                    </div>
                     <div class="tags">
                         <span>Regression</span>
                         <span>Classification</span>
                         <span>Clustering</span>
-                        <span>Scikit-learn</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
+                        <span><i class="fas fa-vial"></i> Scikit-learn</span>
+                        <span><i class="devicon-pandas-plain colored"></i> Pandas</span>
+                        <span><i class="devicon-numpy-plain colored"></i> NumPy</span>
+                    </div>
+                </div>
+
+                <!-- 4. Full Stack Web Development -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="tags">
+                        <span><i class="devicon-mongodb-plain colored"></i> MERN</span>
+                        <span><i class="devicon-laravel-original colored"></i> Laravel</span>
+                        <span><i class="devicon-php-plain colored"></i> PHP</span>
+                        <span><i class="devicon-html5-plain colored"></i> HTML</span>
+                        <span><i class="devicon-css3-plain colored"></i> CSS</span>
+                        <span><i class="devicon-javascript-plain colored"></i> JS</span>
+                        <span><i class="devicon-tailwindcss-original colored"></i> Tailwind</span>
+                        <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+                        <span><i class="devicon-jquery-plain colored"></i> jQuery</span>
+                        <span><i class="fas fa-magic"></i> GSAP</span>
+                    </div>
+                </div>
+
+                <!-- 5. Languages & Frameworks -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages & Frameworks</h3>
+                    </div>
+                    <div class="tags">
+                        <span><i class="devicon-c-plain colored"></i> C</span>
+                        <span><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                        <span><i class="devicon-java-plain colored"></i> Java</span>
+                        <span><i class="devicon-django-plain colored"></i> Django</span>
+                        <span><i class="devicon-flask-original"></i> Flask</span>
+                    </div>
+                </div>
+
+                <!-- 6. Databases & API -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Databases & API</h3>
+                    </div>
+                    <div class="tags">
+                        <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                        <span><i class="devicon-sqlite-plain colored"></i> SQLite</span>
+                        <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                        <span><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+                        <span><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+                        <span><i class="fas fa-pills"></i> REST</span>
+                    </div>
+                </div>
+
+                <!-- 7. Dev Tools & OS -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cog"></i>
+                        <h3>Dev Tools & OS</h3>
+                    </div>
+                    <div class="tags">
+                        <span><i class="devicon-docker-plain colored"></i> Docker</span>
+                        <span><i class="fas fa-envelope-open-text"></i> Postman</span>
+                        <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                        <span><i class="devicon-linux-plain"></i> Linux</span>
+                        <span><i class="devicon-ubuntu-plain colored"></i> Ubuntu</span>
+                        <span>Parrot OS</span>
+                        <span><i class="devicon-windows8-original colored"></i> Windows</span>
                     </div>
                 </div>
             </div>
@@ -109,6 +199,7 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="project-grid">
+                <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-img">
                         <img src="assets/churn.png" alt="Customer Churn Prediction">
@@ -118,15 +209,16 @@
                         <p>Developed a machine learning model to predict customer churn using classification algorithms, helping businesses improve retention strategies.</p>
                         <div class="project-tags">
                             <span>Python</span>
+                            <span>ML</span>
                             <span>Scikit-learn</span>
-                            <span>Pandas</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">Code</a>
-                            <a href="#" class="link-btn">Live</a>
+                            <a href="#" class="link-btn"><i class="fab fa-github"></i> Source</a>
+                            <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live</a>
                         </div>
                     </div>
                 </div>
+                <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-img">
                         <img src="assets/student.png" alt="Student Performance Analysis">
@@ -137,14 +229,15 @@
                         <div class="project-tags">
                             <span>Power BI</span>
                             <span>EDA</span>
-                            <span>Data Cleaning</span>
+                            <span>Analytics</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">Code</a>
-                            <a href="#" class="link-btn">Demo</a>
+                            <a href="#" class="link-btn"><i class="fab fa-github"></i> Source</a>
+                            <a href="#" class="link-btn"><i class="fas fa-play"></i> Demo</a>
                         </div>
                     </div>
                 </div>
+                <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-img">
                         <img src="assets/walmart.png" alt="Walmart Sales Analysis">
@@ -158,41 +251,179 @@
                             <span>Matplotlib</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">Code</a>
+                            <a href="#" class="link-btn"><i class="fab fa-github"></i> Source</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- 4. CA Portal -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="assets/netflix.png" alt="Netflix Data Analysis">
+                        <img src="assets/ca_portal.png" alt="CA Portal">
                     </div>
                     <div class="project-info">
-                        <h3>Netflix Data Analysis</h3>
-                        <p>Analyzed global Netflix datasets to identify content trends, popular genres, and content acquisition patterns over time.</p>
+                        <h3>CA Portal</h3>
+                        <p>A comprehensive platform for Chartered Accountants, offering resources, tools, and a professional interface for financial services.</p>
                         <div class="project-tags">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>Visualizations</span>
+                            <span>Web Portal</span>
+                            <span>Professional</span>
+                            <span>UI/UX</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">Code</a>
+                            <a href="https://ca-portal.page.gd" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- 5. AnimeForge -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="assets/covid.png" alt="COVID-19 Data Analysis">
+                        <img src="assets/animeforge.png" alt="AnimeForge">
                     </div>
                     <div class="project-info">
-                        <h3>COVID-19 Data Analysis</h3>
-                        <p>Built visual reports and tracking dashboards to analyze pandemic progression and vaccination trends globally.</p>
+                        <h3>AnimeForge</h3>
+                        <p>A vibrant platform for anime lovers to discover series, share creative content, and engage with a passionate community.</p>
                         <div class="project-tags">
-                            <span>Python</span>
-                            <span>Tableau</span>
-                            <span>Statistics</span>
+                            <span>Community</span>
+                            <span>Anime</span>
+                            <span>Interactive</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">Code</a>
+                            <a href="https://animeforge.free.nf/" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Mariyam Boutique -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="assets/boutique.png" alt="Mariyam Boutique">
+                    </div>
+                    <div class="project-info">
+                        <h3>Mariyam Boutique</h3>
+                        <p>An elegant e-commerce boutique specializing in premium fashion, featuring a seamless shopping experience and minimalist design.</p>
+                        <div class="project-tags">
+                            <span>E-commerce</span>
+                            <span>Fashion</span>
+                            <span>Retail</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://mariyam-boutique.ct.ws/" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Lake View -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Lake View Restaurant">
+                    </div>
+                    <div class="project-info">
+                        <h3>Lake View</h3>
+                        <p>A sophisticated restaurant website featuring elegant menu displays, table reservation systems, and a scenic, cozy atmosphere.</p>
+                        <div class="project-tags">
+                            <span>Restaurant</span>
+                            <span>Hospitality</span>
+                            <span>Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://lack-view.free.nf/ " target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Furniture Proj -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Furniture Store">
+                    </div>
+                    <div class="project-info">
+                        <h3>Furniture Proj</h3>
+                        <p>A modern e-commerce platform for buying furniture, featuring detailed product galleries and a streamlined shopping experience.</p>
+                        <div class="project-tags">
+                            <span>E-commerce</span>
+                            <span>Retail</span>
+                            <span>PHP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://furniture-proj.infinityfreeapp.com/" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Astra Labs -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=800&q=80" alt="Astra Labs - Modern Medical Center">
+                    </div>
+                    <div class="project-info">
+                        <h3>Astra Labs</h3>
+                        <p>A specialized Pathology Lab website showcasing comprehensive diagnostic services and featuring an integrated system to book medical appointments online.</p>
+                        <div class="project-tags">
+                            <span>Healthcare</span>
+                            <span>Appointment Booking</span>
+                            <span>Diagnostics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://astra-labs.infy.uk/" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
+                            <a href="https://astra-labs.infy.uk/" target="_blank" class="link-btn secondary-btn"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Webinar Center -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Online Institute">
+                    </div>
+                    <div class="project-info">
+                        <h3>Webinar Center</h3>
+                        <p>An educational institute's website designed for selling online courses, featuring interactive webinar modules and student resources.</p>
+                        <div class="project-tags">
+                            <span>Education</span>
+                            <span>E-learning</span>
+                            <span>Institute</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://webinar-web.kesug.com/" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Otaku War Arena -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Anime Game">
+                    </div>
+                    <div class="project-info">
+                        <h3>Otaku War Arena</h3>
+                        <p>An interactive anime-themed game where otakus can categorize and battle with characters based on their anime series.</p>
+                        <div class="project-tags">
+                            <span>Gaming</span>
+                            <span>Anime</span>
+                            <span>Fun</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://otaku-war-arena.netlify.app/" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Modern To-Do -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80" alt="To-Do App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern To-Do App</h3>
+                        <p>A sleek task management tool that helps you stay organized with intuitive list management and productivity tracking.</p>
+                        <div class="project-tags">
+                            <span>Productivity</span>
+                            <span>React</span>
+                            <span>Tools</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://programmer03-day-45.netlify.app/" target="_blank" class="link-btn"><i class="fas fa-external-link-alt"></i> Live View</a>
                         </div>
                     </div>
                 </div>
@@ -202,14 +433,14 @@
 
     <section id="education" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">Education Path</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2025 - 2027</div>
                     <div class="timeline-content">
                         <h3>Master of Computer Applications (MCA)</h3>
-                        <p>Expected Graduation: 2027</p>
+                        <p>Focusing on Advanced Data Structures and AI.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -217,7 +448,7 @@
                     <div class="timeline-date">2022 - 2025</div>
                     <div class="timeline-content">
                         <h3>Bachelor of Computer Applications (BCA)</h3>
-                        <p>Completed in 2025</p>
+                        <p>Foundation in Software Development and Mathematics.</p>
                     </div>
                 </div>
             </div>
@@ -246,17 +477,22 @@
                         <a href="https://www.linkedin.com/in/ashish-prajapati-dev" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
-                <form id="contact-form" class="contact-form">
+                <form id="contact-form" class="contact-form" action="https://formsubmit.co/ap5381545@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="New Portfolio Message!">
+
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea name="message" id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
+                    <button type="submit" class="btn-submit">Launch Message <i class="fas fa-paper-plane"></i></button>
                     <p id="form-status" class="form-status"></p>
                 </form>
             </div>
@@ -265,11 +501,12 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Ashish Prajapati. Built with passion.</p>
+            <p>&copy; 2026 Ashish Prajapati. Crafted with &hearts; for the world of data.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>

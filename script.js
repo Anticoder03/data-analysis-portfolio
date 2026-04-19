@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Typewriter Effect
+    // 1. Typewriter Effect
     const typeText = document.getElementById('type-text');
     const roles = [
         'Data Analyst',
-        'Machine Learning Enthusiast',
-        'Problem Solver',
+        'Full Stack Developer',
+        'ML Specialist',
         'Python Developer',
-        'Visualization Expert'
+        'Insight Generator'
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!isDeleting && charIndex === currentRole.length) {
             isDeleting = true;
-            typeSpeed = 2000; // Pause at end
+            typeSpeed = 2000;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             roleIndex = (roleIndex + 1) % roles.length;
@@ -38,70 +38,78 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(type, typeSpeed);
     }
 
-    type();
+    if (typeText) type();
 
-    // Reveal Animations on Scroll
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.section, .skill-category, .project-card, .timeline-item').forEach(el => {
-        el.classList.add('hide');
-        observer.observe(el);
-    });
-
-    // Navbar Scroll Effect
+    // 2. Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.padding = '0.5rem 0';
-            navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.padding = '1rem 0';
-            navbar.style.background = 'rgba(10, 10, 10, 0.8)';
+            navbar.classList.remove('scrolled');
         }
     });
 
-    // Contact Form Handling (Simple mockup)
+    // 3. Contact Form Handling
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            formStatus.textContent = 'Sending...';
-            formStatus.style.color = '#6366f1';
+            const btn = contactForm.querySelector('.btn-submit');
+            const originalBtnText = btn.innerHTML;
+            const formData = new FormData(contactForm);
+            
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending...';
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
 
-            // Simulate form submission
-            setTimeout(() => {
-                formStatus.textContent = 'Thank you! Your message has been sent successfully.';
-                formStatus.style.color = '#10b981';
-                contactForm.reset();
-            }, 1500);
+                if (response.ok) {
+                    formStatus.textContent = 'Message Sent Successfully!';
+                    formStatus.style.color = '#3b82f6';
+                    btn.innerHTML = '<i class="fas fa-check"></i> Sent';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Failed to send');
+                }
+            } catch (error) {
+                formStatus.textContent = 'Error. Please try again.';
+                formStatus.style.color = '#ef4444';
+                btn.innerHTML = 'Error';
+            } finally {
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = originalBtnText;
+                    formStatus.textContent = '';
+                }, 4000);
+            }
+        });
+    }
+
+    // 4. Interactive Background (Simplified)
+    const blobs = document.querySelectorAll('.bg-blob');
+    if (blobs.length > 0 && typeof gsap !== 'undefined') {
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const x = (clientX / window.innerWidth - 0.5) * 30;
+            const y = (clientY / window.innerHeight - 0.5) * 30;
+
+            blobs.forEach((blob, index) => {
+                const factor = (index + 1) * 0.4;
+                gsap.to(blob, {
+                    x: x * factor,
+                    y: y * factor,
+                    duration: 1.2,
+                    ease: 'power1.out'
+                });
+            });
         });
     }
 });
-
-// Add CSS for Reveal Animations
-const style = document.createElement('style');
-style.textContent = `
-    .hide {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
-    }
-    .reveal {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-document.head.appendChild(style);
